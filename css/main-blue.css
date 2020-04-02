@@ -812,6 +812,13 @@ p {
     margin-bottom: 25px;
     display: block;
     vertical-align: bottom; }
+
+  .c-project-body__video {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    display: block;
+    vertical-align: bottom; }
+
   .c-project-body__image {
     /* filter: sepia(10%); */
     width: calc(80% - 4px);
