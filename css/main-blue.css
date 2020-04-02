@@ -522,7 +522,7 @@ p {
 .c-main-footer {
   overflow: hidden; }
   .c-main-footer__map {
-    height: 365px;
+    height: 75px;
     transition: margin 0.3s; }
   .c-main-footer__top {
     display: none; }
@@ -800,7 +800,7 @@ p {
   margin-bottom: 50px; }
   @media (min-width: 900px) {
     .c-section-heading {
-      margin-top: 25px;
+      margin-top: 50px;
       margin-bottom: 70px; } }
   .c-section-heading__icon {
     display: inline-block;
