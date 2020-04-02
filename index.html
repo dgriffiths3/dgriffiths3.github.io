@@ -12,6 +12,10 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,400i,700" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
 <link rel="stylesheet" href="css/main-blue.css" data-pin="img/icofont-location-pin--blue.png">
 
 
@@ -74,6 +78,7 @@
           <li class="c-main-nav__item"><a href="#section-publications" class="c-main-nav__link" data-navPosition="4"><span>02_</span>publications</a></li>
           <li class="c-main-nav__item"><a href="#section-education" class="c-main-nav__link" data-navPosition="2"><span>03_</span>education</a></li>
           <li class="c-main-nav__item"><a href="#section-contacts" class="c-main-nav__link" data-navPosition="6"><span>04_</span>contacts</a></li>
+
         </ul>
         <div class="c-main-nav__bars js-main-nav-toggle">
           <span></span>
@@ -86,33 +91,68 @@
 
     <!-- ABOUT SECTION-->
     <div id="section-about" class="c-screen-about o-screen-about" data-contentPosition="1">
-      <div class="o-screen-about__col">
+      <div class="o-screen-about__col_profile">
         <figure class="c-screen-about__image">
-          <span></span>
+          <!-- <span></span> -->
           <img src="img/davidgriffiths.jpg" alt="">
-        </figure>
+      </figure>
+
+      <!-- <ul class="c-socials u-mb-35">
+        <li class="c-socials__item">
+          <a href="https://www.linkedin.com/in/david-griffiths-02865b142/" class="c-socials__link">
+            <i class="icofont icofont-brand-linkedin"></i>
+          </a>
+        </li>
+        <li class="c-socials__item">
+          <a href="http://github.com/dgriffiths3/" class="c-socials__link">
+            <i class="icofont icofont-social-github"></i>
+          </a>
+        </li>
+        <li class="c-socials__item">
+          <a href="https://twitter.com/dn_griffiths" class="c-socials__link">
+            <i class="icofont icofont-social-twitter"></i>
+          </a>
+        </li> -->
+
+        <div class="c-socials-about">
+
+          <li class="c-socials-about__item">
+            <a itemprop="sameAs" href="mailto:david.griffiths.16@ucl.ac.uk" >
+              <i class="fas fa-envelope big-icon"></i>
+            </a>
+          </li>
+
+          <li class="c-socials-about__item">
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/david-griffiths-02865b142/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin big-icon"></i>
+            </a>
+          </li>
+
+          <li class="c-socials-about__item">
+            <a itemprop="sameAs" href="https://twitter.com/dn_griffiths" target="_blank" rel="noopener">
+              <i class="fab fa-twitter big-icon"></i>
+            </a>
+          </li>
+
+          <li class="c-socials-about__item">
+            <a itemprop="sameAs" href="http://github.com/dgriffiths3/" target="_blank" rel="noopener">
+              <i class="fab fa-github big-icon"></i>
+            </a>
+          </li>
+
+          <li class="c-socials-about__item">
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=xrSs8r8AAAAJ&hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar big-icon"></i>
+            </a>
+          </li>
+
+        </div>
+
       </div>
       <div class="o-screen-about__col">
         <h1 class="u-mb-5">David Griffiths</h1>
         <span class="c-screen-about__caption">PhD Candidate, 3D vision & machine learning</span>
-        <ul class="c-socials u-mb-35">
-          <li class="c-socials__item">
-            <a href="https://www.linkedin.com/in/david-griffiths-02865b142/" class="c-socials__link">
-              <i class="icofont icofont-brand-linkedin"></i>
-            </a>
-          </li>
-          <li class="c-socials__item">
-            <a href="http://github.com/dgriffiths3/" class="c-socials__link">
-              <i class="icofont icofont-social-github"></i>
-            </a>
-          </li>
-          <li class="c-socials__item">
-            <a href="https://twitter.com/dn_griffiths" class="c-socials__link">
-              <i class="icofont icofont-social-twitter"></i>
-            </a>
-          </li>
-        </ul>
-        <p class="u-mb-10"><span class="u-block">Hello, I am a Ph.D candidate currently working on point cloud classification and detection.
+        <p class="u-mb-10"><span class="u-block">I am currently a 3rd year Ph.D candidate working on point cloud classification and detection.
           I am currently based in the Department of Computer Science at UCL, working under Dr. Jan Boehm and Prof. Tobias Ritschel.
           My research looks at developing deep learning models for understanding of 3D scenes.
           Specifically my Ph.D involves adressing the scarcity of manually labelled 3D data.
@@ -120,10 +160,10 @@
 
         <a href="cv.pdf" download class="c-button c-button--bold-text u-mb-30" href="#">download cv </a>
 
-        <h3 class="u-mb-10">Latest publications:</h3>
+        <!-- <h3 class="u-mb-10">Latest publications:</h3>
         <a href="finding_your_3d_center.html"><p class="u-mb-10" >Finding Your (3D) Center: 3D object detection using a learned loss.</p></a>
         <a href="#"><p class="u-mb-10" >SynthCity: A large scale synthetic point cloud.</p></a>
-        <a href="#"><p class="u-mb-10" >A review on deep learning techniques for 3D sensed data classification.</p></a>
+        <a href="#"><p class="u-mb-10" >A review on deep learning techniques for 3D sensed data classification.</p></a> -->
       </div>
     </div>
 
@@ -134,7 +174,7 @@
 <!-- PUBLICATIONS -->
 <div id="section-publications" class="o-container   wow1 fadeIn"  data-contentPosition="2">
   <div class="c-section-heading">
-    <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91">
+    <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 91 91">
       <rect class="svg-icon__border" x="0.5" y="0.5" width="90" height="90"/>
       <path class="svg-icon__item" d="M436.894,3644.08v41.3h-32.8v-41.3h4.25v-1.05a1.437,1.437,0,0,1,.35-1.02,1.091,1.091,0,0,1,.9-0.35,1.151,1.151,0,0,1,.875.4,1.5,1.5,0,0,1,.325,1.02v1h1.2v-1.05a1.42,1.42,0,0,1,.325-0.97,1.1,1.1,0,0,1,.875-0.38,1.179,1.179,0,0,1,.9.38,1.437,1.437,0,0,1,.35,1.02v0.95h1.2v-1.1a1.209,1.209,0,0,1,.35-0.9,1.231,1.231,0,0,1,.85-0.37,1.092,1.092,0,0,1,.85.3,1.112,1.112,0,0,1,.35.87l0.05,1.2h1.2v-0.55a2.417,2.417,0,0,1,.3-1.37,1.08,1.08,0,0,1,.925-0.45,0.916,0.916,0,0,1,.9.42,2.774,2.774,0,0,1,.275,1.4v0.55h1.25v-1.05a1.635,1.635,0,0,1,.375-0.97,0.994,0.994,0,0,1,.85-0.35,1.126,1.126,0,0,1,.85.4,1.635,1.635,0,0,1,.375.97v1.05h1.2v-1.1a1.28,1.28,0,0,1,.35-0.95,1.207,1.207,0,0,1,1.7,0,1.393,1.393,0,0,1,.4.9v1.15h1.2v-1.15a1.209,1.209,0,0,1,.35-0.9,1.231,1.231,0,0,1,.85-0.37,1.092,1.092,0,0,1,.85.3,1.112,1.112,0,0,1,.35.87v1.25h4.25Zm-26.5,10.75a1.018,1.018,0,0,0-.3.75,0.921,0.921,0,0,0,.325.73,1.327,1.327,0,0,0,.875.27h18.75a0.938,0.938,0,0,0,.85-0.8,1.025,1.025,0,0,0-.2-0.9,1.131,1.131,0,0,0-.9-0.35h-18.6A1.082,1.082,0,0,0,410.394,3654.83Zm0,4.15a1.018,1.018,0,0,0-.3.75,0.921,0.921,0,0,0,.325.73,1.327,1.327,0,0,0,.875.27h18.75a0.96,0.96,0,0,0,.85-0.8,0.983,0.983,0,0,0-.225-0.9,1.148,1.148,0,0,0-.875-0.35h-18.6A1.082,1.082,0,0,0,410.394,3658.98Zm0,12.53a1.057,1.057,0,0,0,.025,1.5,1.327,1.327,0,0,0,.875.27l18.75-.05a0.776,0.776,0,0,0,.575-0.22,1.007,1.007,0,0,0,.275-0.58,0.983,0.983,0,0,0-.225-0.9,1.021,1.021,0,0,0-.875-0.3l-13.85-.05h-4.75A1.291,1.291,0,0,0,410.394,3671.51Zm20.25,5.62a1.018,1.018,0,0,0,.3-0.75,0.888,0.888,0,0,0-.325-0.72,1.359,1.359,0,0,0-.925-0.28h-18.7a0.938,0.938,0,0,0-.85.8,0.89,0.89,0,0,0,.175.9,1.212,1.212,0,0,0,.925.35h18.6A1.082,1.082,0,0,0,430.644,3677.13Zm0-8.32a0.987,0.987,0,0,0,.3-0.75,0.921,0.921,0,0,0-.325-0.75,1.359,1.359,0,0,0-.925-0.28h-18.7a0.972,0.972,0,0,0-.575.28,1.3,1.3,0,0,0-.325.57,1.086,1.086,0,0,0,.25.85,1.131,1.131,0,0,0,.9.35h18.6A1.151,1.151,0,0,0,430.644,3668.81Zm0-4.18a1.048,1.048,0,0,0,.3-0.77,0.868,0.868,0,0,0-.325-0.73,1.47,1.47,0,0,0-.925-0.25h-18.7a1.072,1.072,0,0,0-.575.25,1.132,1.132,0,0,0-.325.55,0.983,0.983,0,0,0,.225.9,1.212,1.212,0,0,0,.925.35h18.6A1.082,1.082,0,0,0,430.644,3664.63Z" transform="translate(-374.5 -3619.5)"/>
     </svg>
@@ -157,7 +197,7 @@
               <p>&nbsp &nbsp &nbsp</p>
               <a href="https://github.com/dgriffiths3/" class="c-button c-button--simple-text">Code</a><i class="icofont icofont-external-link"></i>
               <p>&nbsp &nbsp &nbsp</p>
-              <a href="#" class="c-button c-button--simple-text">Project Page</a><i class="icofont icofont-external-link"></i>
+              <a href="finding_your_3d_center.html" class="c-button c-button--simple-text">Project Page</a><i class="icofont icofont-external-link"></i>
             </div>
           </div>
         </div>
@@ -236,7 +276,7 @@
   <!-- EDUCATION -->
   <div id="section-education" class="o-container js-main-container  wow1 fadeIn" data-contentPosition="3">
     <div class="c-section-heading">
-      <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91">
+      <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 91 91">
         <rect class="svg-icon__border" x="0.5" y="0.5" width="90" height="90"/>
         <path class="svg-icon__item" d="M440.894,931.53a1,1,0,0,0,.875-0.325,1.027,1.027,0,0,0,.025-0.925q-0.6-1.749-1-2.8a0.455,0.455,0,0,1-.05-0.35,0.482,0.482,0,0,1,.2-0.25,2.786,2.786,0,0,0,1.075-1.575,2.6,2.6,0,0,0-.175-1.775,2.709,2.709,0,0,0-1.35-1.3,0.48,0.48,0,0,1-.3-0.45V909.43a0.5,0.5,0,0,1,.075-0.3,0.784,0.784,0,0,1,.325-0.2l5.1-1.25a0.922,0.922,0,0,0,.8-0.825,0.789,0.789,0,0,0-.75-0.825l-0.25-.1q-4.85-1.6-10.75-3.25-4.25-1.149-10.85-2.85a8.584,8.584,0,0,0-4.4-.05l-7.75,1.95q2.8-.75-7.25,1.85-4.25,1.1-7.2,1.95a1.447,1.447,0,0,0-.6.275,0.856,0.856,0,0,0,0,1.1,1.957,1.957,0,0,0,.6.325q5.051,1.551,11.45,3.3,3.9,1.05,11.55,3.05a4.679,4.679,0,0,0,2.25-.05l15.55-3.95a0.772,0.772,0,0,1,.4,0,0.474,0.474,0,0,1,.1.4v11.85a0.626,0.626,0,0,1-.3.55,2.7,2.7,0,0,0-1.125,1.35,2.588,2.588,0,0,0-.075,1.7,2.78,2.78,0,0,0,1.05,1.45,0.37,0.37,0,0,1,.225.225,0.766,0.766,0,0,1-.025.325q-0.45,1.2-1.05,2.95a0.987,0.987,0,0,0,.05.825,0.754,0.754,0,0,0,.7.325h2.85Zm-35.5-15.25a2.984,2.984,0,0,0,.85,2.25,8.331,8.331,0,0,0,2.45,1.7,25.045,25.045,0,0,0,6.75,1.75,42.519,42.519,0,0,0,9.15.325,32.329,32.329,0,0,0,8.25-1.525,9.633,9.633,0,0,0,3.7-2.1,3.251,3.251,0,0,0,1.05-2.45v-4.35a0.9,0.9,0,0,0-.1-0.575,1.04,1.04,0,0,0-.6.025l-6.65,1.7q-4,1-6.65,1.7a7.824,7.824,0,0,1-1.35.3,3.532,3.532,0,0,1-1.45,0l-5.35-1.3q-4-.95-9.55-2.55a0.487,0.487,0,0,0-.4-0.025,0.436,0.436,0,0,0-.1.35v4.775Z" transform="translate(-375.5 -865.5)"/>
       </svg>
@@ -511,7 +551,7 @@
   <!-- CONTACT -->
   <div id="section-contacts" class="o-container   wow1 fadeIn"  data-contentPosition="4">
     <div class="c-section-heading">
-      <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="91" height="91" viewBox="0 0 91 91">
+      <svg class="c-section-heading__icon svg-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 91 91">
         <rect class="svg-icon__border" x="0.5" y="0.5" width="90" height="90"/>
         <path class="svg-icon__item" d="M420.244,4496.18c0.233,0.2.367,0.27,0.4,0.2l0.2-.2q-1.151,1.6,3.35-4.75c1.3-1.83,2.383-3.42,3.25-4.75a58.686,58.686,0,0,0,7.15-14.4,15.384,15.384,0,0,0,.45-7.85,14.379,14.379,0,0,0-2.65-5.85,14.757,14.757,0,0,0-4.9-4.2,14.9,14.9,0,0,0-21.55,16.15,24.1,24.1,0,0,0,1.1,3.75q0.551,1.5,1.55,3.6a93.535,93.535,0,0,0,8.15,13.65q0.85,1.2,2.8,3.8A3.731,3.731,0,0,0,420.244,4496.18Zm7.5-28.45a7.526,7.526,0,0,1-1.15,3.75,7.039,7.039,0,0,1-2.775,2.53,7.4,7.4,0,0,1-3.775.77,6.485,6.485,0,0,1-3.5-1.12,7.688,7.688,0,0,1-2.5-2.75,6.6,6.6,0,0,1-.8-3.53,7.617,7.617,0,0,1,1.15-3.8,7.079,7.079,0,0,1,2.825-2.55,7.263,7.263,0,0,1,3.875-.75,6.615,6.615,0,0,1,3.425,1.18,7.393,7.393,0,0,1,2.45,2.75,7.065,7.065,0,0,1,.825,3.52h-0.05Z" transform="translate(-374.5 -4428.5)"/>
       </svg>
@@ -521,23 +561,35 @@
     <div class="c-screen-contact o-screen-contact">
       <div class="o-screen-contact__col-info">
         <a class="c-screen-contact__item" href="mailto:david.griffiths.16@ucl.ac.uk">david.griffiths.16@ucl.ac.uk</a>
-        <ul class="c-socials u-mb-20">
-          <li class="c-socials__item">
-            <a href="https://www.linkedin.com/in/david-griffiths-02865b142/" class="c-socials__link">
-              <i class="icofont icofont-brand-linkedin"></i>
+
+        <div class="c-socials-contact">
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="mailto:david.griffiths.16@ucl.ac.uk" >
+              <i class="fas fa-envelope big-icon"></i>
             </a>
           </li>
-          <li class="c-socials__item">
-            <a href="http://github.com/dgriffiths3/" class="c-socials__link">
-              <i class="icofont icofont-social-github"></i>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/david-griffiths-02865b142/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin big-icon"></i>
             </a>
           </li>
-          <li class="c-socials__item">
-            <a href="https://twitter.com/dn_griffiths" class="c-socials__link">
-              <i class="icofont icofont-social-twitter"></i>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://twitter.com/dn_griffiths" target="_blank" rel="noopener">
+              <i class="fab fa-twitter big-icon"></i>
             </a>
           </li>
-        </ul>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="http://github.com/dgriffiths3/" target="_blank" rel="noopener">
+              <i class="fab fa-github big-icon"></i>
+            </a>
+          </li>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=xrSs8r8AAAAJ&hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar big-icon"></i>
+            </a>
+          </li>
+        </div>
+
         <ul class="c-screen-contact__address">
           <li>Dept. Computer Science,</li>
           <li>66-72 Gower Street,</li>
