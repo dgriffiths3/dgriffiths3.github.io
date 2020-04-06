@@ -1,0 +1,211 @@
+<!doctype html>
+<html class="" lang="en">
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143822462-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143822462-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>DG - Weighted Augmentation</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- inject:css -->
+  <!-- endinject -->
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,400i,700" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/main.css" data-pin="img/icofont-location-pin--blue.png">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter42961429 = new Ya.Metrika({
+                      id:42961429,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true,
+                      trackHash:true
+                  });
+              } catch(e) { }
+          });
+
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/42961429" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+    <div class="ie-overflow-fix" style="overflow:hidden;">
+
+
+<link rel="stylesheet" href="../css/main.css" data-pin="img/icofont-location-pin--blue.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+
+<header class="c-main-header">
+
+  <div class="o-container">
+    <!-- NAVIGATION -->
+    <div class="c-main-header__nav-wrapper" data-menuAnimated="true">
+      <nav class="c-main-nav js-main-nav">
+        <ul class="c-main-nav__list nav-fixed--is-active js-main-nav__list">
+          <li class="c-main-nav__item"><a href="../index.html#section-publications" class="c-main-nav__link" data-navPosition="1"><span><<_</span>Back</a></li>
+        </ul>
+        <div class="c-main-nav__bars js-main-nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+    <!-- NAVIGATION END -->
+
+    <!-- TITLE SECTION-->
+    <div class="c-project-heading">
+      <h2 class="c-project-heading__header">Weighted Point Cloud Augmentation for Neural Network Training Data Class-Imbalance.</h2>
+      <p class="c-project-heading__author">David Griffiths, <a href="https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/people/dr-jan-boehm">Jan Boehm</a></p>
+      <p class="c-project-heading__year">2019</p>
+    </div>
+  </div>
+
+</header>
+
+
+<main class="o-main">
+
+  <div class="o-container">
+
+    <!-- MAIN SECTION-->
+    <div class="c-project-body">
+
+      <figure class="c-project-body__image">
+        <img src="pub_img/finding_your_center/architecture.png" alt="">
+      </figure>
+
+      <div class="c-project-body__header">
+        <h3> Abstract </h3>
+      </div>
+
+      <div class="c-project-body__text">
+        <p>
+          Recent developments in the field of deep learning for 3D data have demonstrated promising potential for end-to-end
+          learning directly from point clouds. However, many real-world point clouds contain a large class im-balance due to
+          the natural class im-balance observed in nature. For example, a 3D scan of an urban environment will consist mostly
+          of road and facade, whereas other objects such as poles will be under-represented. In this paper we address this issue
+          by employing a weighted augmentation to increase classes that contain fewer points. By mitigating the class im-balance
+          present in the data we demonstrate that a standard PointNet++ deep neural network can achieve higher performance at
+          inference on validation data. This was observed as an increase of F1 score of 19% and 25% on two test benchmark datasets;
+          ScanNet and Semantic3D respectively where no class im-balance pre-processing had been performed. Our networks performed
+          better on both highly-represented and under-represented classes, which indicates that the network is learning more robust
+          nd meaningful features when the loss function is not overly exposed to only a few classes.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CONTACT -->
+  <div id="section-contacts" class="o-container   wow1 fadeIn"  data-contentPosition="4">
+    <div class="c-section-heading">
+      <h2 class="c-section-heading__header">Contact.</h2>
+    </div>
+
+    <div class="c-screen-contact o-screen-contact">
+      <div class="o-screen-contact__col-info">
+        <a class="c-screen-contact__item" href="mailto:david.griffiths.16@ucl.ac.uk">david.griffiths.16@ucl.ac.uk</a>
+
+        <div class="c-socials-contact">
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="mailto:david.griffiths.16@ucl.ac.uk" >
+              <i class="fas fa-envelope big-icon"></i>
+            </a>
+          </li>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/david-griffiths-02865b142/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin big-icon"></i>
+            </a>
+          </li>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://twitter.com/dn_griffiths" target="_blank" rel="noopener">
+              <i class="fab fa-twitter big-icon"></i>
+            </a>
+          </li>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="http://github.com/dgriffiths3/" target="_blank" rel="noopener">
+              <i class="fab fa-github big-icon"></i>
+            </a>
+          </li>
+          <li class="c-socials-contact__item">
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=xrSs8r8AAAAJ&hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar big-icon"></i>
+            </a>
+          </li>
+        </div>
+
+        <ul class="c-screen-contact__address">
+          <li>Dept. Computer Science,</li>
+          <li>66-72 Gower Street,</li>
+          <li>University College London,</li>
+          <li>London,</li>
+          <li>WC1E 6EA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+<footer class="c-main-footer js-main-footer">
+  <div id="contact-map" class="c-main-footer__map"></div>
+  <div class="c-main-footer__top o-container js-main-footer-top"></div>
+  <div class="c-main-footer__bottom js-main-footer-bottom">
+    <p class="c-main-footer__text">David Griffiths. Copyright 2020.</p>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="components/jquery.min.js"></script>
+    <script src="components/wow.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/inview.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
