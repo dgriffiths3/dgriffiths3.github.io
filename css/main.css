@@ -814,7 +814,7 @@ p {
 .c-project-heading {
   /* padding: 30px 20px 15px 25px; */
   margin-top: 20px;
-  padding-top: 25px;
+  padding-top: 0px;
   margin-bottom: 25px; }
   @media (min-width: 900px) {
     .c-project-heading {
@@ -832,6 +832,23 @@ p {
     margin-left: 15px;
     font-family: "Lora", sans-serif;
     vertical-align: bottom; }
+  .c-project-heading__links {
+    margin-left: 15px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    .c-article__button i {
+      padding-left: 3px;
+      font-size: 10px;
+      line-height: 1;
+      color: #727272;
+      color: #2066a1; }
+
   .c-project-heading__year {
     margin-top: 10px;
     margin-left: 15px;
@@ -849,7 +866,7 @@ p {
   @media (min-width: 900px) {
     .c-project-body {
       margin-top: 0px;
-      margin-bottom: 100px; } }
+      margin-bottom: 25px; } }
   .c-project-body__header {
     margin-left: 15px;
     margin-bottom: 25px;
