@@ -90,14 +90,14 @@
 
     <!-- TITLE SECTION-->
     <div class="c-project-heading">
-      <h2 class="c-project-heading__header">Finding Your (3D) Center: <br> 3D object detection using a learned loss.</h2>
+      <h2 class="c-project-heading__header">Curiosity-driven 3D Scene Structure from Single-image Self-supervision</h2>
       <p class="c-project-heading__author">David Griffiths, <a href="https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/people/dr-jan-boehm">Jan Boehm</a>, <a href="https://www.homepages.ucl.ac.uk/~ucactri">Tobias Ritschel</a></p>
-      <p class="c-project-heading__year">European Conference on Computer Vision (ECCV) 2020.</p>
+      <p class="c-project-heading__year">arXiv preprint: November 2020</p>
 
       <div class="c-project-heading__links">
-        <a href="https://arxiv.org/pdf/2004.02693.pdf" class="c-button c-button--simple-text">PDF</a><i class="icofont icofont-paper"></i>
+        <a href="https://arxiv.org/pdf/2012.01230.pdf" class="c-button c-button--simple-text">PDF</a><i class="icofont icofont-paper"></i>
         <p>&nbsp &nbsp &nbsp</p>
-        <a href="https://github.com/dgriffiths3/finding-your-center" class="c-button c-button--simple-text">CODE</a><i class="icofont icofont-code"></i>
+        <a href="https://github.com/dgriffiths3/" class="c-button c-button--simple-text">CODE</a><i class="icofont icofont-code"></i>
       </div>
 
     </div>
@@ -114,7 +114,7 @@
     <div class="c-project-body">
 
       <figure class="c-project-body__image">
-        <img src="project_img/finding_your_center/architecture.png" alt="">
+        <img src="project_img/3d_curiosity/Concept.png" alt="">
       </figure>
 
       <div class="c-project-body__header">
@@ -123,29 +123,17 @@
 
       <div class="c-project-body__text">
         <p>
-          Massive semantic labeling is readily available for 2D images, but much harder to achieve for 3D scenes.
-          Objects in 3D repositories like ShapeNet are labeled, but regrettably only in isolation, so without context.
-          3D scenes can be acquired by range scanners on city-level scale, but much fewer with semantic labels.
-          Addressing this disparity, we introduce a new optimization procedure, which allows training for 3D detection with raw 3D scans while using as little as 5% of the object labels and still achieve comparable performance.
-          Our optimization uses two networks.
-          A <i>scene network</i> maps an entire 3D scene to a set of 3D object centers.
-          As we assume the scene not to be labeled by centers, no classic loss, such as chamfer can be used to train it.
-          Instead, we use another network to emulate the loss.
-          This <i>loss network</i> is trained on a small labeled subset and maps a non-centered 3D object in the presence of distractions to its own center.
-          This function is very similar - and hence can be used instead of - the gradient the supervised loss would have.
-          Our evaluation documents competitive fidelity at a much lower level of supervision, respectively higher quality at comparable supervision.
+          Previous work has demonstrated learning isolated 3D objects (voxel grids, point clouds, meshes, etc.) from 2D-only
+          self-supervision. We here set out to extend this to entire 3D scenes made out of multiple objects, including their
+          location, orientation and type, and the scenes illumination. Once learned, we can map arbitrary 2D images to 3D scene
+          structure. We analyze why analysis-by-synthesis-like losses for supervision of 3D scene structure using differentiable
+          rendering is not practical, as it almost always gets stuck in local minima of visual ambiguities. This can be overcome
+          by a novel form of training: we use an additional network to steer the optimization itself to explore the full gamut of
+          possible solutions i.e. to be curious, and hence, to resolve those ambiguities and find workable minima. The resulting
+          system converts 2D images of different virtual or real images into complete 3D scenes, learned only from 2D images of
+          those scenes.
         </p>
       </div>
-
-      <div class="c-project-body__header">
-        <h3> Video </h3>
-      </div>
-
-      <div class="c-project-body__video">
-        <style>.embed-container {position: relative; padding-bottom: 50%; height: 0;  max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-        <div class='embed-container'><iframe src='https://player.vimeo.com/video/403741614' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
-      </div>
-
 
       <div class="c-project-body__header">
         <h3> Cite </h3>
@@ -154,9 +142,9 @@
       <div class="c-project-body__text">
         <p>
           @article{griffiths2020finding, <br>
-          &nbsp &nbsp &nbsp &nbsp title={Finding Your (3D) Center: 3D Object Detection Using a Learned Loss}, <br>
+          &nbsp &nbsp &nbsp &nbsp title={Curiosity-driven 3D Scene Structure from Single-image Self-supervision}, <br>
           &nbsp &nbsp &nbsp &nbsp author={Griffiths, David and Boehm, Jan and Ritschel, Tobias}, <br>
-          &nbsp &nbsp &nbsp &nbsp journal={arXiv preprint arXiv:2004.02693}, <br>
+          &nbsp &nbsp &nbsp &nbsp journal={arXiv preprint arXiv:2012.01230}, <br>
           &nbsp &nbsp &nbsp &nbsp year={2020} <br>
           }
         </p>
