@@ -1,0 +1,34 @@
+---
+layout: archive
+author_profile: true
+---
+
+{{ content }}
+
+<h1> {{ site.data.ui-text[site.locale].about | default: "About" }} </h1>
+
+{% include base_path %}
+{% assign about_path = "about.md" %}
+{% capture markdown %}{% include {{about_path}} %}{% endcapture %}
+
+<div style="text-align: justify"> 
+  <p class="archive__item-excerpt" itemprop="description">{{ markdown | markdownify }}</p>
+</div>
+
+<p>&nbsp;</p>
+
+<h1 class="archive__item-title">{{ site.data.ui-text[site.locale].publications | default: "Publications" }}</h1>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+<div class="entries-{{ entries_layout }}">
+  {% for post in site.publications reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
