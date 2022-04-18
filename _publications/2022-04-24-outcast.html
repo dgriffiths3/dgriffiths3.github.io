@@ -1,0 +1,350 @@
+---
+title: "OutCast: Single Image Relighting with Cast Shadows"
+authors: <b>David Griffiths</b>, Tobias Ritschel, Julien Philip
+collection: publications
+permalink: /outcast
+excerpt: We address the problem of single image relighting. Our work shows monocular depth estimators can provide sufficient geometry when combined with our novel 3D shadow map prediction module.
+date: 2022-04-24
+year: 2022
+venue: EuroGraphics
+paperurl: ''
+teaser: outcast.png
+layout: paper
+author_profile: false
+---
+
+{% include scripts.html %}
+
+<!-- Import round slider UI -->
+<script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+
+
+<div class="paper__author_names_box">
+    <div class="paper__author_names_item">
+        <a class="item" href="/"> David Griffiths</a><sup> 1,2</sup>
+    </div>
+    <div class="paper__author_names_item">
+        <a class="item" href="https://www.homepages.ucl.ac.uk/~ucactri/"> Tobias Ritschel</a><sup> 1</sup>
+    </div>
+    <div class="paper__author_names_item">
+        <a class="item" href="https://julienphilip.com/"> Julien Philip</a><sup> 2</sup>
+    </div>
+</div>
+
+<div class="paper__author_affiliation_box">
+    <div class="paper_author_affiliation_item">
+        <p> <sup>1</sup> University College London </p>
+    </div>
+    <div class="paper_author_affiliation_item">
+        <p> <sup>2</sup> Adobe </p>
+    </div>
+</div>
+
+<div class="paper__row">
+    <img src="/images/outcast/Teaser.png">
+</div>
+
+<div class="paper__row">
+    <h1> Abstract </h1>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+        <p>
+            We propose a relighting method for outdoor images. Our method mainly focuses on predicting cast shadows in
+            arbitrary
+            novel lighting directions from a single image while also accounting for shading and global effects such the sun
+            light color and clouds. Previous solutions for this problem rely on reconstructing occluder geometry, e.g.,
+            using
+            multi-view stereo, which requires many images of the scene. Instead, in this work we make use of a noisy
+            off-the-shelf
+            single-image depth map estimation as a source of geometry. Whilst this can be a good guide for some lighting
+            effects,
+            the resulting depth map quality is insufficient for directly ray-tracing the shadows. Addressing this, we
+            propose a
+            learned image space ray-marching layer that converts the approximate depth map into a deep 3D representation
+            that is
+            fused into occlusion queries using a learned traversal. Our proposed method achieves, for the first time,
+            state-of-the-art
+            relighting results, with only a single image as input.
+        </p>
+    </div>
+</div>
+
+<div class="paper__row">
+
+    <h1> Comparisons </h1>
+
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="twentytwenty-container">
+                <img src="/images/outcast/cristo_input.jpg" />
+                <img src="/images/outcast/cristo_relit.jpg" />
+            </div>
+        </div>
+        <div class="paper__column_2">
+            <div class="twentytwenty-container">
+                <img src="/images/outcast/lighthouse_input.jpg" />
+                <img src="/images/outcast/lighthouse_relit.jpg" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="twentytwenty-container">
+                <img src="/images/outcast/rothemburg_input.jpg" />
+                <img src="/images/outcast/rothemburg_relit.jpg" />
+            </div>
+        </div>
+        <div class="paper__column_2">
+            <div class="twentytwenty-container">
+                <img src="/images/outcast/mont_input.png" />
+                <img src="/images/outcast/mont_relit.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="paper__row">
+
+    <h1> Interactive Timelapse </h1>
+
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+        <p>
+            Drag the slider beneath the relit image (right) to change sun position.
+            All results are generated using our method.
+        </p>
+    </div>
+
+    <!-- Caernarfon castle timelapse -->
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_container">
+                <img src="/images/outcast/timelapse/caerfanon_castle/caerfanonCastle.jpeg">
+            </div>
+        </div>
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_slider">
+                <div class="paper__timelapse_img_container">
+                    <img id='img-timelapse-1' style="height:100%; object-fit: contain" src="/images/outcast/timelapse/caerfanon_castle/frames/img_1.jpg">
+                </div>
+                <div class="paper__slider_container">
+                    <div class="slider-individual">
+                        <div id="slider-timelapse-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cristo Arc timelapse -->
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_container">
+                <img src="/images/outcast/timelapse/cristo/cristo.jpeg">
+            </div>
+        </div>
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_slider">
+                <div class="paper__timelapse_img_container">
+                    <img id='img-timelapse-2' style="height:100%; object-fit: contain"
+                        src="/images/outcast/timelapse/cristo/frames/img_1.jpg">
+                </div>
+                <div class="paper__slider_container">
+                    <div class="slider-individual">
+                        <div id="slider-timelapse-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Temple of love timelapse -->
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_container">
+                <img src="/images/outcast/timelapse/temple_of_love/temple_of_love.jpeg">
+            </div>
+        </div>
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_slider">
+                <div class="paper__timelapse_img_container">
+                    <img id='img-timelapse-3' style="height:100%; object-fit: contain"
+                        src="/images/outcast/timelapse/temple_of_love/frames/img_1.jpg">
+                </div>
+                <div class="paper__slider_container">
+                    <div class="slider-individual">
+                        <div id="slider-timelapse-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peyrou of love timelapse -->
+    <div class="paper__container_2">
+        <div class="paper__column_2">
+            <div class="paper__timelapse_img_container">
+                <img src="/images/outcast/timelapse/peyrou/peyrou.jpg">
+            </div>
+        </div>
+        <div class="paper__column_2">
+
+            <div class="paper__timelapse_img_slider">
+
+                <div class="paper__timelapse_img_container">
+                    <img id='img-timelapse-4' style="height:100%; object-fit: contain"
+                        src="/images/outcast/timelapse/peyrou/frames/img_2.jpg">
+                </div>
+                <div class="paper__slider_container">
+                    <div class="slider-individual">
+                        <div id="slider-timelapse-4"></div>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="paper__row">
+    <h1> Video </h1>
+    <div class="paper__video_container">
+        <iframe 
+            src="https://player.vimeo.com/video/700545587?h=9fb727c743&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            width="1440" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen 
+            title="OutCast: Outdoor Single-image Relighting with Cast Shadows">
+        </iframe>
+    </div>
+</div>
+
+<div class="paper__row">
+    
+    <h1> Network Overview </h1>
+    
+    <div style="padding: 20px; text-align: justify;">
+        <img src="/images/outcast/architecture.png">
+        <div style="padding-top: 20px">
+            <figcaption>
+                The main network architecture of our approach.
+                Input is outlined in orange, output in green.
+                Pink lines indicate the cost functions we optimize for.
+                Blocks with learnable parameters are double-wedges, and a dotted line indicates siamese training / weight sharing.
+                The scissor symbol is where the gradients are detached from the network graph, to prevent further back propagation of
+                the gradient.
+            </figcaption>
+        </div>
+    </div>
+        
+</div>
+
+<div class="paper__row">
+    <h1> Cite </h1>
+<div class="language-plaintext highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>@article{griffiths2022outcast,
+    title={OutCast: Single Image Relighting with Cast Shadows},
+    author={Griffiths, David and Ritschel, Tobias and Philip, Julien},
+    journal={Computer Graphics Forum},
+    volume={43},
+    year={2022},
+    organization={Wiley Online Library}
+}
+</code></pre>
+</div>
+</div>
+</div>
+
+<script>
+    $(".twentytwenty-container").twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: 'horizontal',
+        before_label: 'Input',
+        after_label: 'Relit',
+        click_to_move: true,
+    });
+</script>
+
+<script>
+
+    $("#slider-timelapse-1").roundSlider({
+        radius: 60,
+        sliderType: "default",
+        showTooltip: false,
+        value: 1,
+        startAngle: 270,
+        min: 1,
+        max: 125,
+        step: 1,
+        width: 3,
+        handleSize: "+15",
+        svgMode: true,
+        pathColor: "#000000",
+
+
+        update: function (args) {
+            $('#img-timelapse-1').prop('src', '/images/outcast/timelapse/caerfanon_castle/frames/img_'+(126-args.value)+'.jpg');
+        }
+    });
+
+    $("#slider-timelapse-2").roundSlider({
+        radius: 60,
+        sliderType: "default",
+        showTooltip: false,
+        value: 1,
+        startAngle: 270,
+        min: 1,
+        max: 125,
+        step: 1,
+        width: 3,
+        handleSize: "+15",
+        svgMode: true,
+        pathColor: "#000000",
+
+        update: function (args) {
+            $('#img-timelapse-2').prop('src', '/images/outcast/timelapse/cristo/frames/img_' + (126-args.value) + '.jpg');
+        }
+    });
+
+    $("#slider-timelapse-3").roundSlider({
+            radius: 60,
+            sliderType: "default",
+            showTooltip: false,
+            value: 1,
+            startAngle: 270,
+            min: 1,
+            max: 125,
+            step: 1,
+            width: 3,
+            handleSize: "+15",
+            svgMode: true,
+            pathColor: "#000000",
+
+            update: function (args) {
+                $('#img-timelapse-3').prop('src', '/images/outcast/timelapse/temple_of_love/frames/img_' + (126-args.value) + '.jpg');
+            }
+        });
+
+    $("#slider-timelapse-4").roundSlider({
+            radius: 60,
+            sliderType: "default",
+            circleShape: "quarter-top-right",
+            showTooltip: false,
+            value: 1,
+            startAngle: 0,
+            min: 2,
+            max: 125,
+            step: 1,
+            width: 3,
+            handleSize: "+15",
+            svgMode: true,
+            pathColor: "#000000",
+
+            update: function (args) {
+                $('#img-timelapse-4').prop('src', '/images/outcast/timelapse/peyrou/frames/img_' + (args.value) + '.jpg');
+            }
+        });
+
+</script>
