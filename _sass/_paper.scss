@@ -148,9 +148,11 @@
 }
 
 .paper__timelapse_img_container {
-  display: flex;
+  object-fit: cover;
+  width: 100%;
+  // display: flex;
   justify-content: center;
-  height: 400px;
+  // height: 400px;
 }
 
 // #slider-timelapse-1 .rs-bg-color {
