@@ -31,8 +31,6 @@ if __name__ == '__main__':
     for root in root_folders:
         
         paths = glob(os.path.join(root, 'frames', '*'))
-        print(paths)
-        quit()
 
         for path in paths:
 

@@ -150,40 +150,10 @@
 .paper__timelapse_img_container {
   object-fit: cover;
   width: 100%;
-  // display: flex;
+  display: flex;
   justify-content: center;
   // height: 400px;
 }
-
-// #slider-timelapse-1 .rs-bg-color {
-//   background-color: transparent;
-// }
-
-// #slider-timelapse-1 .rs-path-color {
-//   background-color: transparent;
-// }
-
-// #slider-timelapse-1 .rs-handle {
-//   background-color: #000000;
-// }
-
-// .rs-control .rs-range-color,
-// .rs-control .rs-range-color  {
-//     background-color: black;
-// }
-
-// .rs-control .rs-path-color {
-//   background-color: transparent;
-// }
-
-// .rs-control .rs-bg-color {
-//   background-color: transparent;
-//   // border: 4px solid rgb(0, 0, 0);
-// }
-
-// .rs-control .rs-border {
-//   border: 2px solid rgb(0, 0, 0);
-// }
 
 .rs-control .rs-handle  {
     background-color: rgb(241, 246, 83);
