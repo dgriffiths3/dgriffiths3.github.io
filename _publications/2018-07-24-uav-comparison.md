@@ -5,6 +5,7 @@ collection: publications
 permalink: /publication/camera-calibration-uas
 excerpt: 'Linear topologies can be challenging terrains for SfM pipelines. A key source of error is caused by intrinsic camera distortions. We demonstrate through effective camera pre-calibration, distortions can be significantly reduced.'
 date: 2018-07-24
+year: 2018
 venue: 'Progress in Physical Geography: Earth and Environment'
 paperurl: 'https://journals.sagepub.com/doi/abs/10.1177/0309133318788964'
 teaser: 'sfm_comparison.png'

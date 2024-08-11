@@ -5,6 +5,7 @@ collection: publications
 permalink: /publication/improving-public-data
 excerpt: Manually labelling buildings for segmentation is a time consuming task. We show that readily available GIS mapping data can be used as training data. We develop a novel pipeline which uses Active Contours to improve coarse polygons into fine per-pixel label maps.
 date: 2019-08-01
+year: 2019
 venue: 'ISPRS Journal of Photogrammetry and Remote Sensing'
 paperurl: https://www.sciencedirect.com/science/article/abs/pii/S0924271619301352
 teaser: 'gis_cnn.png'
