@@ -31,4 +31,14 @@ author_profile: true
   {% endfor %}
 </div>
 
+<p>&nbsp;</p>
+
+<h1 class="archive__item-title">{{ site.data.ui-text[site.locale].patents | default: "Patents" }}</h1>
+
+<div class="entries-{{ entries_layout }}">
+  {% for post in site.patents reversed %}
+    {% include archive-patent.html %}
+  {% endfor %}
+</div>
+
 {% include paginator.html %}
